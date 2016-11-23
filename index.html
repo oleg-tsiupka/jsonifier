@@ -11,7 +11,7 @@
       }]).filter('jsonify', function() {
         return function(input) {
           return input.split(',').reduce(function(r,o){
-            r[o] = 1;
+            r[o.trim()] = 1;
             return r;
           },{});
         };
